@@ -119,35 +119,7 @@ const Home: NextPage = () => {
   return (
     <NativeBaseProvider isSSR theme={theme}>
       <Head>
-        <title>JSON Color Palette Generator</title>
-        <meta name="keywords" content="JSON Color Palette Generator" />
-        {/* og meta links */}
-        <meta property="og:title" content="JSON Color Palette Generator" />
-        <meta
-          property="og:description"
-          content="Generate a color palette from a hex color, also set the amount of shades"
-        />
-        <meta
-          property="og:url"
-          content="https://json-color-palette-generator.vercel.app/"
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="og:site_name" content="JSON Color Palette Generator" />
-        <meta
-          name="twitter:image:alt"
-          content="Generate a color palette from a hex color, also set the amount of shades"
-        />
-        <meta property="og:image" content="/OGImage.png" />
-        <meta
-          name="twitter:image"
-          content="https://json-color-palette-generator.vercel.app/OGImage.png"
-        ></meta>
-        <meta name="twitter:site" content="@rohitistweet" />
-
-        <meta
-          name="description"
-          content="Generate a color palette from a hex color, also set the amount of shades"
-        />
+        <title>Blue express JSON Color Palette Generator</title>
       </Head>
       <ScrollView
         _contentContainerStyle={{
@@ -158,10 +130,10 @@ const Home: NextPage = () => {
         }}
       >
         <VStack alignItems="center" space={{ base: "2", md: "6" }}>
-          <Heading fontSize={{ base: "xl", md: "5xl" }} my="8">
-            JSON Color Palette Generator
+          <Heading fontSize={{ base: "sm", md: "3xl" }} my="8">
+           generador de set de colores json para apps nativas
           </Heading>
-          <SectionBox name="Settings">
+          <SectionBox name="Configuracion">
             <Stack
               direction={{ base: "column", md: "row" }}
               alignSelf="center"
@@ -170,13 +142,13 @@ const Home: NextPage = () => {
             >
               <Box>
                 <FormControl>
-                  <FormControl.Label isRequired>Color Name</FormControl.Label>
+                  <FormControl.Label isRequired>Nombre del color</FormControl.Label>
                   <Input w="56" size="xl" value={name} onChangeText={setName} />
                 </FormControl>
               </Box>
               <Box>
                 <FormControl>
-                  <FormControl.Label isRequired>Palette Size</FormControl.Label>
+                  <FormControl.Label isRequired>cantidad colores</FormControl.Label>
                   <Input
                     w="56"
                     size="xl"
@@ -187,7 +159,7 @@ const Home: NextPage = () => {
               </Box>
               <VStack w="80" space="4">
                 <Heading flex="1" size="sm">
-                  Diffing Index
+                  indice de direfencia
                 </Heading>
                 <Slider
                   flex="2"
@@ -206,7 +178,7 @@ const Home: NextPage = () => {
                 </Slider>
               </VStack>
               <HStack space="2" alignItems="center">
-                <Heading size="sm">Base Color</Heading>
+                <Heading size="sm">Color base</Heading>
                 <ColorInput
                   value={color}
                   onChange={(e: any) => setColor(e.target.value)}
@@ -228,24 +200,15 @@ const Home: NextPage = () => {
           </SectionBox>
           <SectionBox name="Actions">
             <HStack space="4" alignItems="center">
-              <Button onPress={copyToClipboard}>Copy Color Palette JSON</Button>
-              <Button onPress={copyApiToClipboard}>Get API URL</Button>
+              <Button onPress={copyToClipboard}>Copiar JSON</Button>
+              <Button onPress={copyApiToClipboard}>obtener API URL</Button>
             </HStack>
           </SectionBox>
         </VStack>
       </ScrollView>
       <Center py="4">
         <HStack>
-          <Link
-            isExternal
-            isUnderlined={false}
-            _hover={{
-              isUnderlined: true,
-            }}
-            href="https://github.com/rayan1810/json-color-palette-generator"
-          >
-            Made with ❤️ by Rohit Singh
-          </Link>
+          Blue Expres UX team
         </HStack>
       </Center>
     </NativeBaseProvider>
