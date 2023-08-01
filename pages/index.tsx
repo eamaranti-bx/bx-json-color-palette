@@ -88,7 +88,7 @@ const Home: NextPage = () => {
   const copyToClipboard = () => {
     let colorObj = {};
     colorObj[name] = arrayToObject(shades);
-    onCopy(JSON.stringify(colorObj, null, 2));
+    onCopy(JSON.stringify(new Number(colorObj), null, 2));
   };
   const copyApiToClipboard = () => {
     let hostname = "";
